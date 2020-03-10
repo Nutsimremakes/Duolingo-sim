@@ -1,9 +1,8 @@
-
-var birds = 0;
-var maxbirds = 0;
-var birdegg = 0;
-var birdchick = 0;
-var birdeggBonuses = 0;
+var nuts = 0;
+var maxNuts = 0;
+var nutKids = 0;
+var nutBoys = 0;
+var nutBoyBonuses = 0;
 var nutMen = 0;
 var nutFarms = 0;
 var nutFactories = 0;
@@ -1015,17 +1014,14 @@ function ShowChangelog(){
 			changelog.style.height = "80%";
 			changelog.style.width = "20%";
 			changelog.style.padding = "15px 15px 15px 15px";
-
 			//show scroll after animation done
 			setTimeout(function (){
 				changelog.style.overflow = "auto";
 			}, 300);
-
 		} else {
 			changelog.style.height = "0px";
 			changelog.style.width = "0px";
 			changelog.style.padding = "0px 0px 0px 0px";
-
 			changelog.style.overflow = "hidden";
 		}
 	} else {
@@ -1033,15 +1029,12 @@ function ShowChangelog(){
 			changelog.style.height = "73%";
 			changelog.style.width = "80%";
 			changelog.style.padding = "15px 15px";
-
 			upgradeMenu.style.height = "0px";
 			upgradeMenu.style.width = "0px";
 			upgradeMenu.style.padding = "0px 0px 0px 0px";
-
 			buildingMenu.style.height = "0px";
 			buildingMenu.style.width = "0px";
 			buildingMenu.style.padding = "0px 0px 0px 0px";
-
 			//show scroll after animation done
 			setTimeout(function (){
 				changelog.style.overflow = "auto";
@@ -1050,12 +1043,10 @@ function ShowChangelog(){
 			changelog.style.height = "0px";
 			changelog.style.width = "0px";
 			changelog.style.padding = "0px 0px 0px 0px";
-
 			changelog.style.overflow = "hidden";
 		}
 	}
 }
-
 */
 
 function ShowPrestige(){
