@@ -1,4 +1,4 @@
-var nuts = 900000000000;
+var nuts = 0;
 var maxNuts = 0;
 var nutKids = 0;
 var nutBoys = 0;
