@@ -26,7 +26,7 @@
 					played for 0:00:00
 				</div>
 				<input type="file" name="file" id="customImage" style="position:absolute;right:20%;bottom:4%"/>
-				<label for="customImage" onmouseover="uploadHover()" onmouseleave="uploadLeave()" id="uploadLabel"><img src="images/upload.png" id="uploadIcon" style="transition: 0.5s;width:30px;height:30px;left:-2px;padding-right:10px;position:relative;top:2px"><span style="position:relative;top:4%">choose a custom nut image</span></label>
+				<label for="customImage" onmouseover="uploadHover()" onmouseleave="uploadLeave()" id="uploadLabel"><img src="images/upload.png" id="uploadIcon" style="transition: 0.5s;width:30px;height:30px;left:-2px;padding-right:10px;position:relative;top:2px"><span style="position:relative;top:4%">choose a custom image</span></label>
 				<div id="xptonextlevel">
 					<span style="position:relative;top:10%">xp to next level: <span id="xptonextlevelnumber">20</span></span>
 				</div>
@@ -34,7 +34,7 @@
 					<span style="position:relative;top:3%">level: <span id="levelnumber">0</span></span>
 				</div>
 				<div id="bonusdamage">
-					<span style="position:relative;top:3%"><span id="multipliernumber">1x</span> bonus <br>nuts/sec</span>
+					<span style="position:relative;top:3%"><span id="multipliernumber">1x</span> bonus <br>birds/sec</span>
 				</div>
 				<div id="bgbar"></div>
 				<div id="bar" style="text-align:center;overflow-x:visible;white-space:nowrap;transition:0.2s"><span style="position:relative;top:-0.2vw;margin-left:0.5vw">current xp: <span id="xp">0</span></span></div>
@@ -84,18 +84,18 @@
 
 					<div class="item2">
 						<div id="upgrades" style="font-size:2.5vw;font-weight:bold;position: relative;bottom: 8px;display:none">upgrades</div>
-						<span id="damage" style="display:none">total nuts/sec: <span id="totalDamage">0</span></span>
+						<span id="damage" style="display:none">total birds/sec: <span id="totalDamage">0</span></span>
 						<br>
-						<span id="clickBonusText" style="display:none">nuts/click: <span id="clickDamage">1</span></span>
+						<span id="clickBonusText" style="display:none">birds/click: <span id="clickDamage">1</span></span>
 						<br>
 						<hr size="1" noshade color=black id="line2" style="display:none">
-						<button onclick="buy('buyNutBoyBonus')" id="button" class="buyNutBoyBonus" style="display:none;font-size:0.8vw"><b>Bigger Nuts</b><br>nut boy nuts/sec x <span id="nutBoyBonusAmount">2</span><br>- <span id="nutBoyBonusCost">100</span> nuts</button>
+						<button onclick="buy('buyNutBoyBonus')" id="button" class="buyNutBoyBonus" style="display:none;font-size:0.8vw"><b>Bigger eggs</b><br>Bird egg birds/sec x <span id="nutBoyBonusAmount">2</span><br>- <span id="nutBoyBonusCost">100</span> nuts</button>
 						<br>
 						<button onclick="buy('x2Click')" class="buyClick" style="display:none;background-color: #F5AB35;font-size:0.8vw"><b>Powerful Clicking</b><br>click bonus + 15<br>- <span id="clickCost">300</span> nuts</button>
 						<br>
 						<button onclick="buy('clickUpgrade2')" class="buyClick2" style="display:none;background-color: #87D37C;font-size:0.8vw"><b>Big Boy Clicks</b><br>click bonus + 50<br>- <span id="clickCost2">5000</span> nuts</button>
  						<br>
-						<button onclick="buy('allUpgrade')" class="buyAllUpgrade" style="display:none;background-color: #26A65B;font-size:0.8vw"><b>Nut Mastery</b><br>all except click x 2<br>- <span id="allUpgradeCost">100000</span> nuts</button>
+						<button onclick="buy('allUpgrade')" class="buyAllUpgrade" style="display:none;background-color: #26A65B;font-size:0.8vw"><b>Bird Master</b><br>all except click x 2<br>- <span id="allUpgradeCost">100000</span> nuts</button>
 						<br>
 						<button onclick="buy('clickUpgrade3')" class="buyClick3" style="display:none;background-color: #03C9A9;font-size:0.8vw"><b>Nuclear Clicks</b><br>click bonus x 2<br>- <span id="clickCost3">300000</span> nuts</button>
 					</div>
@@ -113,20 +113,20 @@
 
 				<div id="middle">
 					<!--<button onclick="clickOnButton()" class="clickButton" id="middleNut">click</button>-->
-					<button onclick="buy('nutKid')" class="buyNutKid" style="display:none;background-color: #EB9532"><b>Bird Egg</b><br>(+<span id="nutKidDamage">0.1</span> nuts/sec)<br>- <span id="nutKidCost">15</span> nuts</button>
-					<button onclick="buy('nutBoy')" class="buyNutBoy" style="display:none;background-color: #F39C12"><b>Bird Chicks</b><br>(+<span id="nutBoyBonusTotal">1</span> nuts/sec)<br>- <span id="nutBoyCost">50</span> nuts</button>
-					<button onclick="buy('nutMan')" class="buyNutMan" style="display:none;background-color: #87D37C"><b>Language Man</b><br>(+<span id="nutManDamage"> </span> nuts/sec)<br>- <span id="nutManCost">1000</span> nuts</button>
-					<button onclick="buy('nutFarm')" class="buyNutFarm" style="display:none;background-color: #26A65B"><b>Language Farm</b><br>(+<span id="nutFarmDamage"> </span> nuts/sec)<br>- <span id="nutFarmCost">13000</span> nuts</button>
-					<button onclick="buy('nutFactory')" class="buyNutFactory" style="display:none;background-color: #03C9A9"><b>Language Factory</b><br>(+<span id="nutFactoryDamage"> </span> nuts/sec)<br>- <span id="nutFactoryCost">150000</span> nuts</button>
-					<button onclick="buy('nutBank')" class="buyNutBank" style="display:none;background-color: #5C97BF"><b>Language Vault</b><br>(+<span id="nutBankDamage"> </span> nuts/sec)<br>- <span id="nutBankCost">1400000</span> nuts</button>
-					<button onclick="buy('nutEmpire')" class="buyNutEmpire" style="display:none;background-color: #1F3A93"><b>Language Empire</b><br>(+<span id="nutEmpireDamage"> </span> nuts/sec)<br>- <span id="nutEmpireCost">20000000</span> nuts</button>
-					<button onclick="buy('nutWorldControl')" class="buyNutWorldControl" style="display:none;background-color: #9B59B6"><b>Doulingo App</b><br>(+<span id="nutWorldControlDamage"> </span> nuts/sec)<br>- <span id="nutWorldControlCost">330000000</span> nuts</button>
-					<button onclick="buy('nutGalacticReign')" class="buyNutGalacticReign" style="display:none;background-color: #F62459"><b>Ailen Language</b><br>(+<span id="nutGalacticReignDamage"> </span> nuts/sec)<br>- <span id="nutGalacticReignCost">5100000000</span> nuts</button>
-					<button onclick="buy('deezNutGuy')" class="buyDeezNutGuy" style="display:none;background-color: #F22613"><b>Evil Bird</b><br>(+<span id="deezNutGuyDamage"> </span> nuts/sec)<br>- <span id="deezNutGuyCost">75000000000</span> nuts</button>
-					<button onclick="buy('nutTimeTravel')" class="buyNutTimeTravel" style="display:none;background-color: #96281B"><b>Demon Bird</b><br>(+<span id="nutTimeTravelDamage"> </span> nuts/sec)<br>- <span id="nutTimeTravelCost">1000000000000</span> nuts</button>
-					<button onclick="buy('nutUniversalDomination')" class="buyNutUniversalDomination" style="display:none;background-color: #72231a"><b>Universal Language Device</b><br>(+<span id="nutUniversalDominationDamage"> </span> nuts/sec)<br>- <span id="nutUniversalDominationCost">40000000000000</span> nuts</button>
-					<button onclick="buy('nutGod')" class="buyNutGod" style="display:none;background-color: #2d0e0b"><b>Language God</b><br>(+<span id="nutGodDamage"> </span> nuts/sec)<br>- <span id="nutGodCost">170000000000000</span> nuts</button>
-					<button onclick="buy('nutAfterlife')" id="redglow" class="buyNutAfterlife" style="display:none;background-image:url('images/colours.gif');-webkit-backface-visibility: hidden;"><b>Killer bird</b><br>(+<span id="nutAfterlifeDamage"> </span> nuts/sec)<br>- <span id="nutAfterlifeCost">2000000000000000</span> nuts</button>
+					<button onclick="buy('nutKid')" class="buyNutKid" style="display:none;background-color: #EB9532"><b>Bird Egg</b><br>(+<span id="nutKidDamage">0.1</span> birdss/sec)<br>- <span id="nutKidCost">15</span> nuts</button>
+					<button onclick="buy('nutBoy')" class="buyNutBoy" style="display:none;background-color: #F39C12"><b>Bird Chicks</b><br>(+<span id="nutBoyBonusTotal">1</span> birdss/sec)<br>- <span id="nutBoyCost">50</span> nuts</button>
+					<button onclick="buy('nutMan')" class="buyNutMan" style="display:none;background-color: #87D37C"><b>Language Man</b><br>(+<span id="nutManDamage"> </span> birds/sec)<br>- <span id="nutManCost">1000</span> nuts</button>
+					<button onclick="buy('nutFarm')" class="buyNutFarm" style="display:none;background-color: #26A65B"><b>Language Farm</b><br>(+<span id="nutFarmDamage"> </span> birds/sec)<br>- <span id="nutFarmCost">13000</span> nuts</button>
+					<button onclick="buy('nutFactory')" class="buyNutFactory" style="display:none;background-color: #03C9A9"><b>Language Factory</b><br>(+<span id="nutFactoryDamage"> </span> birds/sec)<br>- <span id="nutFactoryCost">150000</span> nuts</button>
+					<button onclick="buy('nutBank')" class="buyNutBank" style="display:none;background-color: #5C97BF"><b>Language Vault</b><br>(+<span id="nutBankDamage"> </span> birds/sec)<br>- <span id="nutBankCost">1400000</span> nuts</button>
+					<button onclick="buy('nutEmpire')" class="buyNutEmpire" style="display:none;background-color: #1F3A93"><b>Language Empire</b><br>(+<span id="nutEmpireDamage"> </span> birds/sec)<br>- <span id="nutEmpireCost">20000000</span> nuts</button>
+					<button onclick="buy('nutWorldControl')" class="buyNutWorldControl" style="display:none;background-color: #9B59B6"><b>Doulingo App</b><br>(+<span id="nutWorldControlDamage"> </span> birds/sec)<br>- <span id="nutWorldControlCost">330000000</span> nuts</button>
+					<button onclick="buy('nutGalacticReign')" class="buyNutGalacticReign" style="display:none;background-color: #F62459"><b>Ailen Language</b><br>(+<span id="nutGalacticReignDamage"> </span> birds/sec)<br>- <span id="nutGalacticReignCost">5100000000</span> nuts</button>
+					<button onclick="buy('deezNutGuy')" class="buyDeezNutGuy" style="display:none;background-color: #F22613"><b>Evil Bird</b><br>(+<span id="deezNutGuyDamage"> </span> birds/sec)<br>- <span id="deezNutGuyCost">75000000000</span> nuts</button>
+					<button onclick="buy('nutTimeTravel')" class="buyNutTimeTravel" style="display:none;background-color: #96281B"><b>Demon Bird</b><br>(+<span id="nutTimeTravelDamage"> </span> birds/sec)<br>- <span id="nutTimeTravelCost">1000000000000</span> nuts</button>
+					<button onclick="buy('nutUniversalDomination')" class="buyNutUniversalDomination" style="display:none;background-color: #72231a"><b>Universal Language Device</b><br>(+<span id="nutUniversalDominationDamage"> </span> birds/sec)<br>- <span id="nutUniversalDominationCost">40000000000000</span> nuts</button>
+					<button onclick="buy('nutGod')" class="buyNutGod" style="display:none;background-color: #2d0e0b"><b>Language God</b><br>(+<span id="nutGodDamage"> </span> birds/sec)<br>- <span id="nutGodCost">170000000000000</span> birds</button>
+					<button onclick="buy('nutAfterlife')" id="redglow" class="buyNutAfterlife" style="display:none;background-image:url('images/colours.gif');-webkit-backface-visibility: hidden;"><b>Killer bird</b><br>(+<span id="nutAfterlifeDamage"> </span> birds/sec)<br>- <span id="nutAfterlifeCost">2000000000000000</span> nuts</button>
 				</div>
 
 				<div id="bottomLeft">
