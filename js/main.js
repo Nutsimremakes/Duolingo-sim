@@ -236,7 +236,7 @@ function clickOnButton(){
 		UpdateLevel();
 		document.getElementById("nuts").innerHTML = kFormatter(round(nuts));
 		document.getElementById('nutsGamble').innerHTML = round(nuts);
-		document.title = ""+nuts+" nuts";
+		document.title = ""+nuts+" Birds";
 		CheckAmounts();
 		pressed = true;
 		if(maxNuts <= nuts){
@@ -291,7 +291,7 @@ function nutClick(number){
     nuts = round(nuts + number);
 	document.getElementById("nuts").innerHTML = kFormatter(round(nuts));
 	document.getElementById('nutsGamble').innerHTML = round(nuts);
-	document.title = kFormatter(nuts) + " nuts";
+	document.title = kFormatter(nuts) + " Birds";
 	CheckAmounts();
 	GreyOutButtons();
 	if(maxNuts <= nuts){
@@ -309,7 +309,7 @@ window.setInterval(function(){
 		UpdateLevel();
 	}
 
-	document.title = kFormatter(nuts) + " nuts";
+	document.title = kFormatter(nuts) + " Birds";
 
 	var addedNuts = document.getElementById("addedNuts");
 	if(totalDamage >= 1){
